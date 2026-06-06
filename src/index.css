@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-family-sans);
+
+  --color-prode-canvas: #07111f;
+  --color-prode-panel: #0c1a2d;
+  --color-prode-panel-strong: #12233a;
+  --color-prode-line: #24364f;
+  --color-prode-text: #f4f7fb;
+  --color-prode-muted: #9fb0c7;
+  --color-prode-gold: #f6c85f;
+  --color-prode-cyan: #35d3ff;
+  --color-prode-green: #4fd18b;
+  --color-prode-warning: #f59e0b;
+  --color-prode-red: #ff6b6b;
+}
+
+:root {
+  color-scheme: dark;
+  --font-family-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+
+  --surface-canvas: var(--color-prode-canvas);
+  --surface-panel: var(--color-prode-panel);
+  --surface-panel-strong: var(--color-prode-panel-strong);
+  --surface-muted: color-mix(in srgb, var(--color-prode-panel) 82%, white 18%);
+  --border-subtle: color-mix(in srgb, var(--color-prode-line) 72%, transparent);
+  --border-strong: var(--color-prode-line);
+  --text-primary: var(--color-prode-text);
+  --text-secondary: var(--color-prode-muted);
+  --text-muted: color-mix(in srgb, var(--color-prode-muted) 72%, transparent);
+  --accent-primary: var(--color-prode-gold);
+  --accent-live: var(--color-prode-cyan);
+  --accent-success: var(--color-prode-green);
+  --accent-warning: var(--color-prode-warning);
+  --accent-danger: var(--color-prode-red);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --shadow-panel: 0 24px 80px color-mix(in srgb, black 42%, transparent);
+  font-family: var(--font-family-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent-live) 34%, transparent);
+  color: var(--text-primary);
+}
