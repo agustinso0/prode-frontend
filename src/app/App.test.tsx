@@ -8,7 +8,7 @@ describe('App', () => {
 
     expect(
       screen.getByRole('heading', {
-        name: /tournament predictions for private leagues/i,
+        name: /run your tournament predictions before kickoff/i,
       }),
     ).toBeInTheDocument();
   });
