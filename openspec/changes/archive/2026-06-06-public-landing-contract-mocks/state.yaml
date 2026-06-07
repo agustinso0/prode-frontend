@@ -1,0 +1,19 @@
+change: public-landing-contract-mocks
+status: planning
+tdd: true
+test_command: npx pnpm test
+created: 2026-06-06
+source: engram-sdd-artifacts
+applyState: ready
+
+blocks:
+  - artifact-mismatch-block
+
+resolution:
+  action: materialize-engram-to-openspec
+  reason: Native dispatcher requires OpenSpec artifacts to detect active change. Engram artifacts existed but OpenSpec did not.
+  engram_ids:
+    - "1686" # proposal
+    - "1687" # spec
+    - "1688" # design
+    - "1689" # tasks
